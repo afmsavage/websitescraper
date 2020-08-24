@@ -14,5 +14,8 @@
   "license": "MIT",
   "dependencies": {
     "website-scraper": "^4.2.2"
+  },
+  "devDependencies": {
+    "eslint": "^7.7.0"
   }
 }

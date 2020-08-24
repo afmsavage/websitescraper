@@ -1,20 +1,20 @@
 const scrape = require('website-scraper');
-const websiteUrl = 'http://www.meterpro.com/';
+const site = 'http://www.meterpro.com/';
 
 scrape({
-  urls: [websiteUrl],
+  urls: [site],
   urlFilter: function (url) {
-    return url.indexOf(websiteUrl) === 0;
+    return url.indexOf(site) === 0;
   },
   recursive: true,
-  maxDepth: 50,
+  maxDepth: 40,
   prettifyUrls: true,
   filenameGenerator: 'bySiteStructure',
   directory: './website', // where to place the website files
-})
-  .then((data) => {
-    console.log('Entire website succesfully downloaded');
-  })
-  .catch((err) => {
-    console.log('An error ocurred', err);
-  });
+}).then(() => {
+  console.log('Scraped successfully, enjoy!');
+});
+
+scrape().catch((err) => {
+  console.log(err);
+});
