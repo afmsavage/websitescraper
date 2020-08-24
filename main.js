@@ -1,5 +1,5 @@
 const scrape = require('website-scraper');
-const site = 'http://www.meterpro.com/';
+const site = 'http://www.example.com/';
 
 scrape({
   urls: [site],
